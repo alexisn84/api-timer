@@ -22,3 +22,18 @@ answer5El.style.display = 'none';
 answer6El.style.display = 'none';
 submitScoreEl.style.display = 'none';
 enterInitials.style.display='none';
+
+
+//cllick start quiz button
+
+
+//timer starts when start button clicked
+
+
+//questions to cycle thru
+
+
+//subtract time if incorrectly answered
+
+
+//submit initials and score
