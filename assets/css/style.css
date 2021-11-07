@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*start header styles*/
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    height: 100px;
+    padding: 25px;
+    background-color: skyblue;
+}
+
+header p {
+    color: blue;
+    background-color: beige;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.highScore {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+}
+
+.highScore a {
+    color: blue;
+    background-color: beige;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.highScore a:hover {
+    background-color: slategray;
+}
+
+.clock {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    padding: 5px;
+}
+
+
+/*main body styles*/
+.welcome {
+        height: 431px;
+        margin: 100px auto 0 auto;
+        max-width: 700px;
+}
+
+
+.xmas-welcome {
+    display: flex;
+    color: blue;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+/*start quiz styles*/
+.xmas-welcome p {
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 15px;    
+}
+
+/*button styles*/
+.startQuiz {
+    color: blue;
+    background-color: beige;
+    font-size: 30px;
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    text-align: center;
+}
+
+#start:hover {
+    background-color: slategray;
+}
+
+.btn {
+    color: blue;
+    background-color: beige;
+    font-size: 30px;
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    text-align: center;
+}
+
+/* High Score styles*/
+.wrapper {
+    display: flex;
+    color: blue;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+#go-back {
+    color: blue;
+    background-color: beige;
+    font-size: 30px;
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    text-align: center;
+}
+
+#clear {
+    color: blue;
+    background-color: beige;
+    font-size: 30px;
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/*start footer style*/
+footer {
+    height: 102px;
+    padding: 25px 20px 32px 20px;
+    background-color: skyblue;
+}
+
+footer div {
+    color: beige;
+    font-weight: 700;
+    float: right;
+    padding: 15px 0px 0px 0px;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+}
+
+/* This will be applied on any screen smaller than 768px */
+@media screen and (max-width: 768px) {
+
+    
+}
+
+/* This will be applied on any screen smaller than 575px */
+@media screen and  (max-width: 575px) {
+}

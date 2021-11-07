@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Christmas Quiz</title>
+</head>
+
+<body>
+
+<header>
+    <!--High Score Button-->
+    <div class="highScore"><a href="highscores.html">View High Scores</a></div>
+
+    <!--timer-->
+    <div>
+        <p class="clock">Time: <span id="timer">xxxx</span></p>
+    </div>
+</header>
+
+<!--welcome-->
+    <div class="welcome">
+        <div id="xmas" class="xmas-welcome">
+            <h2>Welcome to Our Christmas Quiz</h2>
+            <p>Ready to test your holiday knowledge? Try to answer them as quickly as you can, but remember
+                wrong answers have a 5 second time penalty! Let's begin and see where you rank in the High Scores!</p>
+
+            <p id="displayScore"></p>
+            <p id="initials"></p>
+            <textarea id="enterInitials"></textarea>
+
+            <div id="questionGroup">
+                <!--start quiz button-->
+                <button id="start" class="startQuiz"> Start Quiz</button>
+                <button id="answer1" class="btn"></button>
+                <button id="answer2" class="btn"></button>
+                <button id="answer3" class="btn"></button>
+                <button id="answer4" class="btn"></button>
+                <button id="answer5" class="btn"></button>
+                <button id="answer6" class="btn"></button>
+                <button id="submitScore" class="btn">You completed the quiz😃</button>
+            </div>
+        </div>
+
+        <div>
+            <p id="displayScore">Your final score is <span id="score"></span>.</p>    
+            <p id="initials"></p>
+            <textarea class="enterInitials"></textarea>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            &copy;2021 by Jolly Holly Corporation.
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/questions.js"></script>
+</body>
+</html>
