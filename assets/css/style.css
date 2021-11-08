@@ -42,7 +42,7 @@ header p {
     background-color: slategray;
 }
 
-.clock {
+.time {
     position: absolute;
     top: 25px;
     right: 15px;
@@ -57,6 +57,9 @@ header p {
         max-width: 700px;
 }
 
+.cover {
+    display: none;
+}
 
 .xmas-welcome {
     display: flex;
@@ -91,7 +94,23 @@ header p {
     background-color: slategray;
 }
 
-.btn {
+#nextQuestion {
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 15px;
+    color: blue;
+}
+
+.options {
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 15px;
+    color: blue;
+}
+
+#answerKey {
     color: blue;
     background-color: beige;
     font-size: 30px;
@@ -101,18 +120,8 @@ header p {
     text-align: center;
 }
 
-/* High Score styles*/
-.wrapper {
-    display: flex;
-    color: blue;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    font-weight: 700;
-    font-size: 30px;
-}
-
-#go-back {
+/*Score styles*/
+#results {
     color: blue;
     background-color: beige;
     font-size: 30px;
@@ -122,7 +131,7 @@ header p {
     text-align: center;
 }
 
-#clear {
+#submit {
     color: blue;
     background-color: beige;
     font-size: 30px;

@@ -1,39 +1,85 @@
+src="./assets/js/questions.js"
+var questionsEl = document.querySelector("#questions");
+var timerEl = document.querySelector("#timer");
+var startBtn = document.querySelector("#start");
+var optionsEl = document.querySelector("#options");
+
+var timerId;
+var timer = 6 * 10;
+var questionArray = 0
 
 
 
+//load page functions
+function startQuiz() {
+    var xmasEl = document.getElementById("xmas");
+    xmasEl.setAttribute("class", "cover");
+    console.log(xmasEl);
 
+    //show questions
+    questionsEl.removeAttribute("class");
 
-var startQuizEl = document.getElementById('start'); 
-var answer1El = document.getElementById('answer1'); 
-var answer2El = document.getElementById('answer2'); 
-var answer3El = document.getElementById('answer3'); 
-var answer4El = document.getElementById('answer4');
-var answer5El = document.getElementById('answer5');
-var answer6El = document.getElementById('answer6'); 
-var submitScoreEl = document.getElementById('submitScore'); 
+    //timer functions
+    timerId = setInterval(timerStart, 1000);
+    timerEl.textContent = timer;
+    
+    retrieveQuestions();
+    
+}
+//button click to start quiz
+startBtn.onclick = startQuiz;
 
+//get questions from array, 2nd js 
+var retrieveQuestions = function () {
 
-// Hide items that are not ready to be displayed
-answer1El.style.display = 'none';
-answer2El.style.display = 'none';
-answer3El.style.display = 'none';
-answer4El.style.display = 'none';
-answer5El.style.display = 'none';
-answer6El.style.display = 'none';
-submitScoreEl.style.display = 'none';
-enterInitials.style.display='none';
+    //bring first question
+    var firstQuestion = questions [questionArray];
 
+    //show current question
+    var titleEl = document.getElementById("nextQuestion");
+    titleEl.textContent = firstQuestion.title;
 
-//cllick start quiz button
+    //clear out previous question choice
+    optionsEl.innerHTML = "";
 
+    //go thru questions
+    firstQuestion.questionArray.forEach(option => {
+        
+        //button for each question
+        var optionButton = document.createElement("button");
+        option.setAttribute("class", "option");
+        option.setAttribute("value", option);
 
-//timer starts when start button clicked
+        option.textContent = i + 1 + ". " + option;
 
+        //add event listener
+        option.onclick = questionBtn;
 
-//questions to cycle thru
+        //show answer options
+        optionsEl.appendChild(option);
+        
+    });
+}
 
+var questionBtn = function() {
+    //check if right/wrong answer
+    if(this.value !== questions[questionArray].answer) {
+        //deduct time for wrong answer
+        timer -= 5;
 
-//subtract time if incorrectly answered
+        if (timer < 0) {
+            timer = 0;
+        }
+    }
+}
 
+var timerStart = function () {
+    timer--;
+    timerEl.textContent = timer;
 
-//submit initials and score
+    //if time runs out
+    if (timer <= 0) {
+        stopQuiz();
+    }
+}
+
