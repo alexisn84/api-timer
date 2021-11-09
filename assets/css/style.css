@@ -36,6 +36,7 @@ header p {
     font-weight: 700;
     padding: 5px;
     text-decoration: none;
+    border-radius: 15px;
 }
 
 .highScore a:hover {
@@ -47,12 +48,13 @@ header p {
     top: 25px;
     right: 15px;
     padding: 5px;
+    border-radius: 15px;
 }
 
 
 /*main body styles*/
 .welcome {
-        height: 431px;
+        height: 350px;
         margin: 100px auto 0 auto;
         max-width: 700px;
 }
@@ -88,6 +90,7 @@ header p {
     border: none;
     padding: 10px;
     text-align: center;
+    border-radius: 15px;
 }
 
 #start:hover {
@@ -102,12 +105,13 @@ header p {
     color: blue;
 }
 
-.options {
+.options  {
     text-align: center;
     padding: 15px;
     font-weight: 500;
     font-size: 15px;
     color: blue;
+    
 }
 
 #answerKey {
@@ -141,6 +145,10 @@ header p {
     text-align: center;
 }
 
+#submit:hover {
+    background-color: slategray;
+}
+
 
 /*start footer style*/
 footer {
@@ -154,6 +162,37 @@ footer div {
     font-weight: 700;
     float: right;
     padding: 15px 0px 0px 0px;
+}
+
+/*highscores html styles*/
+.wrapper h1 {
+    display: flex;
+    color: blue;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.highscores {
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 15px; 
+    color: blue;
+}
+
+#go-back, #clear {
+    color: blue;
+    background-color: beige;
+    font-size: 30px;
+    font-weight: 700;
+    border: none;
+    padding: 5px;
+    text-align: center;
+    border-radius: 15px;
+    
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */

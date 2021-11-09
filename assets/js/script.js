@@ -1,4 +1,4 @@
-src="./assets/js/questions.js"
+//src="./assets/js/questions.js"
 var questionsEl = document.querySelector("#questions");
 var timerEl = document.querySelector("#timer");
 var startBtn = document.querySelector("#start");
@@ -29,18 +29,18 @@ function startQuiz() {
     retrieveQuestions();
     
 }
-//button click to start quiz
-startBtn.onclick = startQuiz;
+
 
 //get questions from array, 2nd js 
 var retrieveQuestions = function () {
 
     //bring first question
-    var firstQuestion = questions [questionIndex];
+    var firstQuestion = questions[questionIndex];
 
     //show current question
     var titleEl = document.getElementById("nextQuestion");
     titleEl.textContent = firstQuestion.title;
+    titleEl.style.fontSize = "300%";
 
     //clear out previous question choice
     optionsEl.innerHTML = "";
@@ -50,8 +50,14 @@ var retrieveQuestions = function () {
         
         //button for each question
         var optionButton = document.createElement("button");
-        optionButton.setAttribute("class", "choice");
+        optionButton.setAttribute("class", "choices");
         optionButton.setAttribute("value", choice);
+        optionButton.style.color = "blue";
+        optionButton.style.fontSize = "125%";
+        optionButton.style.backgroundColor = "white";
+        optionButton.style.border = "2px solid slategray";
+        optionButton.style.padding = "10px";
+        
 
         optionButton.textContent = i + 1 + ". " + choice;
 
@@ -128,6 +134,7 @@ var timerStart = function () {
     }
 }
 
+//save score
 var saveScore = function () {
     var initials = initialsEl.value.trim();
 
@@ -136,14 +143,14 @@ var saveScore = function () {
         var highScores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
         //add new score using object for current user
-        var newScore = {
+        var addScore = {
             score: timer,
             initials: initials
         };
 
         //add to local storage
-        highScores.push(newScore);
-        window.localStorage.setItem("highscores", JSON.stringify("highscores"));
+       //highScores.push(addScore);
+        window.localStorage.setItem("highScores", JSON.stringify("highScores"));
 
         //change to new browser
         window.location.href = "highscores.html";
@@ -157,7 +164,11 @@ var enter = function (event) {
 }
 }
 
+//button click to start quiz
+startBtn.onclick = startQuiz;
+
 //save initials click
 submitBtn.onclick = saveScore;
-initialsEl.event = event;
 
+//console.log('my name');
+initialsEl.event = event;
