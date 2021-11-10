@@ -2,20 +2,21 @@
 
 //show scores/initials
 var showScore = function() {
-    var scores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
     //list scores high to low
     highscores.sort(function(a,b) {
         return b.score - a.score;
     });
+console.log(highscores);
 
     //li for each score
     highscores.forEach(function(score) {
     var elementLi = document.createElement("li");
-    elementLi.textContent = score.highscoresals + "-" + score.score;
+    elementLi.textContent = score.initials + "-" + score.score;
 
     //print to page
-    var print = document.getElementById("");
+    var print = document.getElementById("highscores");
     print.appendChild(elementLi);
 });
 }

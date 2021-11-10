@@ -92,7 +92,7 @@ var questionBtn = function() {
             answerKeyEl.style.fontSize = "200%";
         }
         //show correct/incorrect
-        answerKeyEl.setAttribute("class", "answerKey");
+        answerKeyEl.setAttribute("class", "answer-show");
         setTimeout(function() {
             answerKeyEl.setAttribute("class", "answer-hide");
             }, 1000);
@@ -148,9 +148,11 @@ var saveScore = function () {
             initials: initials
         };
 
+        highScores.push(addScore);
+
         //add to local storage
        //highScores.push(addScore);
-        window.localStorage.setItem("highScores", JSON.stringify("highScores"));
+        window.localStorage.setItem("highscores", JSON.stringify(highScores));
 
         //change to new browser
         window.location.href = "highscores.html";

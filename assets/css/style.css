@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 /*start header styles*/
 header {
     display: flex;
@@ -35,7 +37,7 @@ header p {
     font-size: 30px;
     font-weight: 700;
     padding: 5px;
-    text-decoration: none;
+    text-decoration: none; 
     border-radius: 15px;
 }
 
@@ -124,6 +126,14 @@ header p {
     text-align: center;
 }
 
+.answer-show {
+    display: block;
+}
+
+.answer-hide {
+    display: none;
+}
+
 /*Score styles*/
 #results {
     color: blue;
@@ -165,6 +175,38 @@ footer div {
 }
 
 /*highscores html styles*/
+.score-html {
+    color: blue;
+    
+    font-size: 30px;
+    font-weight: 700;
+    padding: 45px;
+    text-decoration: none; 
+    
+}
+
+#go-back {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+}
+
+#go-back:hover{
+    background-color: slategray;
+}
+
+#clear {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+#clear:hover {
+    background-color: slategray;
+}
+
 .wrapper h1 {
     display: flex;
     color: blue;
