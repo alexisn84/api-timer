@@ -31,3 +31,4 @@ document.getElementById("clear").onclick = clearScores;
 
 //run code when page loads
 showScore();
+

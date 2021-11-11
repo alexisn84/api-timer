@@ -157,14 +157,8 @@ var saveScore = function () {
         //change to new browser
         window.location.href = "highscores.html";
     }
+}
 
-//check for enter 
-var enter = function (event) {
-    if (event.key === "Enter") {
-        saveScore();
-    }
-}
-}
 
 //button click to start quiz
 startBtn.onclick = startQuiz;
@@ -173,4 +167,4 @@ startBtn.onclick = startQuiz;
 submitBtn.onclick = saveScore;
 
 //console.log('my name');
-initialsEl.event = event;
+//initialsEl.event = event;
